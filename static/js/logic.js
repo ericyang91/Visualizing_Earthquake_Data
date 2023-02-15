@@ -12,7 +12,6 @@ var myMap = L.map("map", {
   // Load the GeoJSON data.
 var geoData = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
-
 // Get the data with d3.
 
 d3.json(geoData).then(function(data) {
@@ -38,6 +37,7 @@ d3.json(geoData).then(function(data) {
     }    
 });
 
+// Creating the legend
 
 const legend = L.control({position: 'bottomright'});
   legend.onAdd = function() {
@@ -55,4 +55,4 @@ const legend = L.control({position: 'bottomright'});
          
       return div;
   };
-  legend.addTo(myMap)
+  legend.addTo(myMap);
